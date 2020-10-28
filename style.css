@@ -1,0 +1,109 @@
+:root {
+    --bghf: #252525;
+    --bgm: #7f2ff7;
+    --bgs: #f8f02f
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #fff;
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 70px 1fr 70px;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+
+header, footer {
+    grid-column: 1 / 4;
+
+    background-color: var(--bghf);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+main {
+    grid-row: 2 / 3;
+    background-color: var(--bgm);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    text-transform: uppercase;
+   font-size: 1.5rem;
+
+}
+
+
+h2::after {
+    content: 'poder'  ;
+    color: var(--bgs);
+}
+aside {
+    grid-column: 2/ 4;
+    background-color: var(--bgs);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: var(--bgm);
+    font-size: 1.3rem;
+    font-weight: bold;
+
+}
+
+
+
+
+/* -- KEYFRAMES --  */
+
+header {
+    animation: header 2s;
+}
+
+@keyframes header {
+    from {
+        transform: translateY(-100%) ;
+    }
+}
+
+
+
+aside {
+    animation: aside 1.5s ease;
+}
+
+@keyframes aside {
+    from {
+        transform: translate(100%);
+    }
+}
+
+main {
+    animation: main .8s;
+}
+@keyframes main {
+    from {
+        transform: translate(-100%);
+    }
+
+}
+
+footer {
+    animation: footer 2s;
+}
+
+@keyframes footer {
+    from {
+        transform: translateY(100%)
+    }
+}
+
